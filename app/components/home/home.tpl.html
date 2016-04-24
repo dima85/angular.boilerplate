@@ -1,0 +1,5 @@
+<span>Enter number of repeats:</span>
+<input type="text" ng-model="number" value="submit"></input>
+
+<simple-directive ng-repeat="n in getNumbers() track by $index" value="n" text="Number is:" on-action="sayHelloFromDirective()">
+</simple-directive>

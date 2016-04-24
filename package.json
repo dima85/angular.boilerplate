@@ -1,0 +1,38 @@
+{
+  "name": "angular.boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate project for angular.js with gulp built system and jasmine/karma tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dmitriy Shykaliuk (dshykaljuk@gmail.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "angular-mocks": "^1.5.5",
+    "browser-sync": "^2.12.3",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-inject": "^4.0.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-less": "^3.0.5",
+    "gulp-uglifyjs": "^0.6.2",
+    "jasmine-core": "^2.4.1",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.1.0",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-cli": "^0.1.2",
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "main-bower-files": "^2.11.1",
+    "phantomjs-prebuilt": "^2.1.7",
+    "run-sequence": "^1.1.5",
+    "stream-series": "^0.1.1",
+    "wiredep": "^4.0.0"
+  },
+  "dependencies": {}
+}
