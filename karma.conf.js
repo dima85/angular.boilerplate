@@ -4,16 +4,17 @@
 
 module.exports = function(config) {
 
-    var bower = wiredep({
+  var bower = wiredep({
     directory: 'app/bower_components',
     dependencies: true,
     devDependencies: true
   });
 
-    var files = bower.js.concat([
-      './app/app.js',
-      'app/!(bower_components)/**/*.js',
-    ]);
+  var files = bower.js.concat([
+    './app/**/*.tpl.html',
+    './app/app.js',
+    'app/!(bower_components)/**/*.js',
+  ]);
 
   config.set({
 
@@ -27,8 +28,13 @@ module.exports = function(config) {
     plugins: [
     'karma-jasmine',
     'karma-phantomjs-launcher',
-    'karma-chrome-launcher'],
+    'karma-chrome-launcher',
+    'karma-ng-html2js-preprocessor'
+    ],
 
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'app'
+    },
     // list of files / patterns to load in the browser
     files: files,
     // [
@@ -50,6 +56,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      './app/**/*.tpl.html': ['ng-html2js']
     },
 
 

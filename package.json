@@ -26,6 +26,7 @@
     "karma-chrome-launcher": "^0.2.3",
     "karma-cli": "^0.1.2",
     "karma-jasmine": "^0.3.8",
+    "karma-ng-html2js-preprocessor": "^0.2.2",
     "karma-phantomjs-launcher": "^1.0.0",
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1",
