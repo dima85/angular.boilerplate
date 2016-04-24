@@ -17,6 +17,7 @@ var lessPluginCleanCSS = require('less-plugin-clean-css');
 var lessPluginAutoPrefix = require('less-plugin-autoprefix');
 var cleancss = new lessPluginCleanCSS({ advanced: true });
 var autoprefix = new lessPluginAutoPrefix({ browsers: ["last 3 versions"] });
+var karmaServer = require('karma').Server;
 
 function startBrowserSync(baseDir) {
   browserSync.init({
@@ -154,13 +155,29 @@ gulp.task('inject-js', function() {
     .pipe(gulp.dest('./dist/'));
 });
 
+gulp.task('test', function (done) {
+  new karmaServer({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done).start();
+});
+
+gulp.task('tdd', function (done) {
+  new karmaServer({
+    configFile: __dirname + '/karma.conf.js'
+  }, done).start();
+});
+
 gulp.task('run', function() {
-  runSequence(['clean-dev'], ['lint', 'inject-app-css-dev', 'watch', 'connect-browser-dev']);
+  runSequence(['clean-dev'],
+    ['lint', 'tdd'],
+    ['inject-app-css-dev', 'watch', 'connect-browser-dev']);
 });
 
 gulp.task('build', function() {
   runSequence(['clean'],
-    ['lint', 'copy-html'],
+    ['lint', 'test'],
+    ['copy-html'],
     ['inject-vendor-js'],
     ['inject-app-js'],
     ['inject-vendor-css'],
