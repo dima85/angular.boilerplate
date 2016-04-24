@@ -170,7 +170,7 @@ gulp.task('tdd', function (done) {
 
 gulp.task('run', function() {
   runSequence(['clean-dev'],
-    ['lint', 'tdd'],
+    ['lint'],
     ['inject-app-css-dev', 'watch', 'connect-browser-dev']);
 });
 
