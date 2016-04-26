@@ -2,10 +2,12 @@ describe('Home Contoller', function() {
   'use strict';
 	var scope;
 	var controller;
+  var simpleService;
 	beforeEach(module('angularApp'));
-	beforeEach(inject(function($controller, $rootScope) {
+	beforeEach(inject(function($controller, $rootScope, $injector) {
 		scope = $rootScope.$new();
-		controller = $controller('HomeController', {$scope: scope});
+    simpleService = $injector.get('simpleService');
+		controller = $controller('HomeController', {$scope: scope, simpleService: simpleService});
 	}));
 
 

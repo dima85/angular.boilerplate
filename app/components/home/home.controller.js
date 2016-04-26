@@ -5,9 +5,17 @@
     .module('angularApp')
     .controller('HomeController', homeController);
 
-	homeController.$inject = ['$scope'];
+	homeController.$inject = ['$scope', 'simpleService'];
 
-	function homeController($scope) {
+	function homeController($scope, simpleService) {
+
+    simpleService
+    .getPosts()
+    .then(function(posts) {
+      console.log(posts);
+      $scope.posts = posts;
+    });
+
 		$scope.test = 'test...';
     $scope.sayHelloFromDirective = function() {
       console.log('action');
@@ -20,5 +28,6 @@
       }
       return result;
     };
+
 	}
 })(window.angular);
