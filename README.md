@@ -1,5 +1,6 @@
 # angular.boilerplate
-##### Simple AngularJS boilerplate project, uses gulp as build system, karma + jasmine as test system, LESS pre-processor for handling styles. Project has basic structure with separation on components. Includes sample controller, directive, service and filter with sample unit tests for each of this components.
+##### Simple AngularJS boilerplate project 
+###### Uses gulp as build system, karma + jasmine as test system, LESS pre-processor for handling styles. Project has basic structure with separation on components. Includes sample controller, directive, service and filter with sample unit tests for each of this components.
 
 Use gulp to run development server, test application, prepare for deployment by minimizing and concatenating all resource.
 
