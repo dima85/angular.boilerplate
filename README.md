@@ -7,5 +7,5 @@ Use gulp to run development server, test application, prepare for deployment by 
 ### Gulp commands: 
 * ```gulp tdd``` - runs karma, execute all tests and watch on files in app folder, if files has been changed re-run all tests.
 * ```gulp test``` - runs karma and all tests once
-* ```gulp run``` - runs (browsersync server)[https://www.browsersync.io/docs/gulp/] that points to app folder and watches for file changes, reloads browsers if any file has been changed
+* ```gulp run``` - runs [browsersync server](https://www.browsersync.io/docs/gulp/) that points to app folder and watches for file changes, reloads browsers if any file has been changed
 * ```gulp build``` - minimize, concantenate and inject all resources into *dist* folder 
